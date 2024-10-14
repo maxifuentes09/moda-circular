@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MODA CIRCULAR</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet"> 
+<body>
+
+<header>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <h1>MODA CIRCULAR</h1>
+</header>
+
+<ul id="menu" class="menu">
+    <li><a href="vestidos.html">VESTIDOS/POLLERAS</a></li>
+    <li>
+        <a href="#">REMERAS</a>
+        <ul class="submenu">
+            <li><a href="remerascortas.html">CORTAS</a></li>
+            <li><a href="remeraslargas.html">LARGAS</a></li>
+        </ul>
+    </li>
+    <li><a href="buzo.html">BUZOS/SWEATERS</a></li>
+    <li><a href="pantalones.html">PANTALONES</a>
+        <ul>
+            <li><a href="jogging.html">JOGGING</a></li>
+            <li><a href="jeans.html">JEANS</a></li>
+            <li><a href="shorts.html">SHORTS</a></li>
+        </ul>
+    </li>
+    <li><a href="camperas.html">CAMPERAS</a></li>
+</ul>
+
+<script src="script.js"></script>
+
+<!-- INICIO DE VIDEO -->
+<video width="100%" height="100%"  autoplay loop muted>
+    <source src="videos/mc-v1.mp4" type="video/mp4">
+    Tu navegador no soporta la etiqueta de video.
+</video>
+
+  <!-- Agregar un h3 antes del carrusel -->
+<h3 style="text-align: center; font-family: 'Cinzel', serif; color: #333;">DESTACADO</h3>
+
+   <!-- Carrusel -->
+
+   <!-- Carrusel -->
+<!-- Carousel -->
+<div class="carousel">
+    <div class="carousel-images">
+        <div class="carousel-item active" onclick="openModal(this)">
+            <img src="img/vestido1.jpg" alt="Vestido Elegante">
+            <div class="caption">Vestido Elegante</div>
+        </div>
+        <div class="carousel-item" onclick="openModal(this)">
+            <img src="img/jean 1.jpg" alt="Jean">
+            <div class="caption">Jean</div>
+        </div>
+        <div class="carousel-item" onclick="openModal(this)">
+            <img src="img/remerascortas2.jpg" alt="Remera Casual">
+            <div class="caption">Remera Casual</div>
+        </div>
+        <div class="carousel-item" onclick="openModal(this)">
+            <img src="img/buzo1.jpg" alt="Buzo Deportivo">
+            <div class="caption">Buzo Deportivo</div>
+        </div>
+        <div class="carousel-item" onclick="openModal(this)">
+            <img src="img/buzo2.jpg" alt="Sweater de Invierno">
+            <div class="caption">Sweater de Invierno</div>
+        </div>
+    </div>
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+</div>
+
+<!-- Modal para el Zoom de la Imagen -->
+<div id="modal" class="modal">
+    <span id="closeModal" class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImg">
+    <div id="caption"></div>
+</div>
+
+<!-- 5 imagenes con links -->
+<div class="image-list">
+    <div class="image-item">
+        <a href="vestidos.html">
+            <img src="img/vestido2.jpg" alt="VESTIDOS/POLLERAS">
+            <div class="image-caption">VESTIDOS/POLLERAS</div>
+        </a>
+    </div>
+    <div class="image-item">
+        <a href="remerascortas.html">
+            <img src="img/remeracorta4.jpg" alt="REMERAS">
+            <div class="image-caption">REMERAS</div>
+        </a>
+    </div>
+    <div class="image-item">
+        <a href="buzo.html">
+            <img src="img/buzo2.jpg" alt="Descripción de la imagen 3">
+            <div class="image-caption">BUZOS/SWEATERS</div>
+        </a>
+    </div>
+    <div class="image-item">
+        <a href="jogging.html">
+            <img src="img/jogging2.jpg" alt="Descripción de la imagen 4">
+            <div class="image-caption">PANTALONES</div>
+        </a>
+    </div>
+    <div class="image-item">
+        <a href="camperas.html">
+            <img src="img/campera2.jpg" alt="Descripción de la imagen 5">
+            <div class="image-caption">CAMPERAS</div>
+        </a>
+    </div>
+</div>
+<img class="logo" src="img/B (4).png" alt="">
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-content">
+        <a href="https://www.instagram.com/maxfuentes__/" target="_blank" class="social-icon">
+            <img src="img/ICO5.png" alt="https://www.instagram.com/maxfuentes__/" />
+        </a>
+        <div class="footer-address">AV.BURGOS 166, MORON, BSAS</div>
+    </div>
+    <div class="footer-copyright">
+        <a href="https://www.instagram.com/maxfuentes__/" target="_blank">2024 Created by @maxfuentes__</a>
+    </div>
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

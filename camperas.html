@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Camperas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        <a href="index.html"><h1>MODA CIRCULAR</h1></a>
+    </header>
+
+    <!-- Menú de Navegación -->
+    <ul id="menu" class="menu">
+        <li><a href="vestidos.html">VESTIDOS/POLLERAS</a></li>
+        <li>
+            <a href="#">REMERAS</a>
+            <ul class="submenu">
+                <li><a href="remerascortas.html">CORTAS</a></li>
+                <li><a href="remeraslargas.html">LARGAS</a></li>
+            </ul>
+        </li>
+        <li><a href="buzos.html">BUZOS/SWEATERS</a></li>
+        <li><a href="pantalones.html">PANTALONES</a>
+            <ul>
+                <li><a href="joggins.html">JOGGING</a></li>
+                <li><a href="jeans.html">JEANS</a></li>
+                <li><a href="shorts.html">SHORTS</a></li>
+            </ul>
+        </li>
+        <li><a href="camperas.html">CAMPERAS</a></li>
+    </ul>
+    <h1 class="catalog-title">CAMPERAS</h1> <!-- Título agregado -->
+
+    <!-- Catálogo de Camperas -->
+    <div class="catalogo">
+        <div class="item" onclick="zoomImagen(this)">
+            <img src="img/campera1.jpg" alt="Campera 1">
+            <div class="info">
+                <h3>Campera Cuero Negra</h3>
+                <p>$80.00</p>
+            </div>
+        </div>
+        <div class="item" onclick="zoomImagen(this)">
+            <img src="img/campera2.jpg" alt="Campera 2">
+            <div class="info">
+                <h3>Campera Jean Azul</h3>
+                <p>$70.00</p>
+            </div>
+        </div>
+        <div class="item" onclick="zoomImagen(this)">
+            <img src="img/campera3.jpg" alt="Campera 3">
+            <div class="info">
+                <h3>Campera Deportiva Roja</h3>
+                <p>$65.00</p>
+            </div>
+        </div>
+        <div class="item" onclick="zoomImagen(this)">
+            <img src="img/campera4.jpg" alt="Campera 4">
+            <div class="info">
+                <h3>Campera Rompevientos Verde</h3>
+                <p>$60.00</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay para efecto de zoom -->
+    <div id="overlay" class="overlay" onclick="cerrarZoom()">
+        <img id="overlayImg" class="overlay-content">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

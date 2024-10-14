@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Buzos/Sweaters</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        <a href="index.html"><h1>MODA CIRCULAR</h1></a>
+    </header>
+
+    <!-- Menú de Navegación -->
+    <ul id="menu" class="menu">
+        <li><a href="vestidos.html">VESTIDOS/POLLERAS</a></li>
+        <li>
+            <a href="#">REMERAS</a>
+            <ul class="submenu">
+                <li><a href="remerascortas.html">CORTAS</a></li>
+                <li><a href="remeraslargas.html">LARGAS</a></li>
+            </ul>
+        </li>
+        <li><a href="buzo.html">BUZOS/SWEATERS</a></li>
+        <li><a href="pantalones.html">PANTALONES</a>
+            <ul>
+                <li><a href="jogging.html">JOGGING</a></li>
+                <li><a href="jeans.html">JEANS</a></li>
+                <li><a href="shorts.html">SHORTS</a></li>
+            </ul>
+        </li>
+        <li><a href="camperas.html">CAMPERAS</a></li>
+    </ul>
+
+    <h1 class="catalog-title">BUZOS/SWEATERS</h1> <!-- Título agregado -->
+
+    <!-- Catálogo de Buzos/Sweaters -->
+    <div class="catalogo">
+        <div class="item" onclick="zoomImagen(this)">
+            <img src="img/buzo1.jpg" alt="Buzo 1">
+            <div class="info">
+                <h3>Buzo Gris</h3>
+                <p>$70.00</p>
+            </div>
+        </div>
+        <div class="item" onclick="zoomImagen(this)">
+            <img src="img/buzo2.jpg" alt="Buzo 2">
+            <div class="info">
+                <h3>Suéter Azul</h3>
+                <p>$80.00</p>
+            </div>
+        </div>
+        <div class="item" onclick="zoomImagen(this)">
+            <img src="img/buzo3.jpg" alt="Buzo 3">
+            <div class="info">
+                <h3>Hoodie Negro</h3>
+                <p>$75.00</p>
+            </div>
+        </div>
+        <div class="item" onclick="zoomImagen(this)">
+            <img src="img/buzo4.jpg" alt="Buzo 4">
+            <div class="info">
+                <h3>Suéter Beige</h3>
+                <p>$85.00</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay para efecto de zoom -->
+    <div id="overlay" class="overlay" onclick="cerrarZoom()">
+        <img id="overlayImg" class="overlay-content">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Remeras Largas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+      <a href="index.html"> <h1>MODA CIRCULAR</h1></a> 
+    </header>
+    
+    <ul id="menu" class="menu">
+        <li><a href="vestidos.html">VESTIDOS/POLLERAS</a></li>
+        <li>
+            <a href="#">REMERAS</a>
+            <ul class="submenu">
+                <li><a href="remerascortas.html">CORTAS</a></li>
+                <li><a href="remeraslargas.html">LARGAS</a></li>
+            </ul>
+        </li>
+        <li><a href="buzo.html">BUZOS/SWEATERS</a></li>
+        <li><a href="pantalones.html">PANTALONES</a>
+            <ul>
+                <li><a href="jogging.html">JOGGING</a></li>
+                <li><a href="jeans.html">JEANS</a></li>
+                <li><a href="shorts.html">SHORTS</a></li>
+            </ul>
+        </li>
+        <li><a href="camperas.html">CAMPERAS</a></li>
+    </ul>
+    
+    <script src="script.js"></script>
+<!-- REMERAS LARGAS -->
+<h1 class="catalog-title">REMERAS LARGAS</h1> <!-- Título agregado -->
+    <div class="catalogo">
+        <div class="item" onclick="zoomImagen(this)">
+            <img src="img/remeraslargas1.jpg" alt="Remera Larga 1">
+            <div class="info">
+                <h3>Remera Larga Negra</h3>
+                <p>$60.00</p>
+            </div>
+        </div>
+        <div class="item" onclick="zoomImagen(this)">
+            <img src="img/remeraslargas1.jpg" alt="Remera Larga 2">
+            <div class="info">
+                <h3>Remera Larga Blanca</h3>
+                <p>$55.00</p>
+            </div>
+        </div>
+        <div class="item" onclick="zoomImagen(this)">
+            <img src="img/remeralarga3.jpg" alt="Remera Larga 3">
+            <div class="info">
+                <h3>Remera Larga Rayada</h3>
+                <p>$65.00</p>
+            </div>
+        </div>
+        <div class="item" onclick="zoomImagen(this)">
+            <img src="img/remeralarga4.jpg" alt="Remera Larga 4">
+            <div class="info">
+                <h3>Remera Larga Gris</h3>
+                <p>$50.00</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay for zoom effect -->
+    <div id="overlay" class="overlay" onclick="cerrarZoom()">
+        <img id="overlayImg" class="overlay-content">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Joggings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        <a href="index.html"><h1>MODA CIRCULAR</h1></a>
+    </header>
+
+    <!-- Menú de Navegación -->
+    <ul id="menu" class="menu">
+        <li><a href="vestidos.html">VESTIDOS/POLLERAS</a></li>
+        <li>
+            <a href="">REMERAS</a>
+            <ul class="submenu">
+                <li><a href="remerascortas.html">CORTAS</a></li>
+                <li><a href="remeraslargas.html">LARGAS</a></li>
+            </ul>
+        </li>
+        <li><a href="buzo.html">BUZOS/SWEATERS</a></li>
+        <li><a href="pantalones.html">PANTALONES</a>
+            <ul>
+                <li><a href="jogging.html">JOGGING</a></li>
+                <li><a href="jeans.html">JEANS</a></li>
+                <li><a href="shorts.html">SHORTS</a></li>
+            </ul>
+        </li>
+        <li><a href="camperas.html">CAMPERAS</a></li>
+    </ul>
+    <h1 class="catalog-title">JOGGING</h1> <!-- Título agregado -->
+
+    <!-- Catálogo de Joggings -->
+    <div class="catalogo">
+        <div class="item" onclick="zoomImagen(this)">
+            <img src="img/jogging 1.jpg" alt="Jogging 1">
+            <div class="info">
+                <h3>Jogging Gris Claro</h3>
+                <p>$35.00</p>
+            </div>
+        </div>
+        <div class="item" onclick="zoomImagen(this)">
+            <img src="img/jogging2.jpg" alt="Jogging 2">
+            <div class="info">
+                <h3>Jogging Negro Ajustado</h3>
+                <p>$40.00</p>
+            </div>
+        </div>
+        <div class="item" onclick="zoomImagen(this)">
+            <img src="img/.jpg" alt="Jogging 3">
+            <div class="info">
+                <h3>Jogging Azul Marino</h3>
+                <p>$38.00</p>
+            </div>
+        </div>
+        <div class="item" onclick="zoomImagen(this)">
+            <img src="img/jogging4.jpg" alt="Jogging 4">
+            <div class="info">
+                <h3>Jogging Verde Militar</h3>
+                <p>$42.00</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay para efecto de zoom -->
+    <div id="overlay" class="overlay" onclick="cerrarZoom()">
+        <img id="overlayImg" class="overlay-content">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1239 @@
+/* Estilos generales */
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+}
+/* Estilos generales para dispositivos móviles */
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+}
+
+/* Ajustar el encabezado para móviles */
+header {
+    padding: 10px; /* Menor padding en dispositivos móviles */
+}
+
+h1 {
+    font-size: 20px; /* Tamaño de fuente más pequeño en móviles */
+}
+
+/* Estilo del encabezado h3 */
+h3 {
+    font-size: 18px; /* Tamaño de fuente más pequeño para móviles */
+    margin: 15px 0; /* Menos margen */
+}
+
+/* Carrusel */
+.carousel {
+    margin: 15px auto; /* Espaciado más pequeño */
+}
+
+.carousel img {
+    max-height: 300px; /* Limitar la altura de las imágenes en móviles */
+}
+
+/* Estilos para los botones de navegación */
+.prev, .next {
+    font-size: 20px; /* Tamaño de fuente más pequeño */
+    padding: 5px; /* Menos espacio alrededor del texto */
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 18px; /* Ajustar el tamaño del título */
+    }
+
+    h3 {
+        font-size: 16px; /* Ajustar el tamaño del h3 */
+    }
+
+    .carousel img {
+        max-height: 250px; /* Ajustar la altura máxima de las imágenes */
+    }
+
+    .prev, .next {
+        font-size: 18px; /* Más pequeño para móviles */
+    }
+}
+
+
+/* Header */
+
+header {
+    background-color: #f8f8f8;
+    color: #333;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1000;
+    border-bottom: 2px solid #e5e5e5;
+
+    position: sticky; /* Hace que el header sea pegajoso */
+    top: 0; /* Se adhiere a la parte superior */
+    background-color: white; /* Color de fondo del header */
+    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    padding: 10px; /* Espaciado interno */
+}
+
+.menu-btn {
+    font-size: 26px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: #333;
+    margin-right: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-family: 'Cinzel', serif; /* Fuente para títulos */
+    font-size: 24px;
+    letter-spacing: 1px;
+    color: #6a6a6a;
+    animation: fadeInOut 3s ease-in-out infinite; /* Añadir animación de aparición/desaparición */
+}
+
+/* Animación de aparición y desaparición */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0; /* Comienza invisible */
+        transform: translateY(-10px); /* Mover hacia arriba */
+    }
+    50% {
+        opacity: 1; /* Visible */
+        transform: translateY(0); /* Posición original */
+    }
+    100% {
+        opacity: 0; /* Invisible */
+        transform: translateY(10px); /* Mover hacia abajo */
+    }
+}
+
+/* Estilos para el menú */
+.menu {
+    display: none;
+    list-style-type: none;
+    background-color: #faf0e6; /* Tono pastel suave */
+    padding: 20px;
+    margin: 0;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo de los elementos del menú */
+.menu li {
+    margin: 15px 0;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+}
+
+/* Estilo de los enlaces */
+.menu a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    background-color: #eaeaea; /* Fondo gris claro */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: 700;
+}
+
+/* Efecto hover en los enlaces */
+.menu a:hover {
+    background-color: #d4d4d4; /* Color gris suave para hover */
+    transform: scale(1.05);
+}
+
+/* Submenú */
+.submenu {
+    list-style-type: none;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.submenu a {
+    font-size: 16px;
+    color: #555;
+    background-color: #f4f4f4; /* Fondo más claro para submenú */
+    margin-top: 8px;
+}
+
+.submenu a:hover {
+    background-color: #cfcfcf; /* Color gris claro suave para submenú en hover */
+}
+
+/* Mostrar el menú al hacer clic */
+.show-menu {
+    display: block;
+}
+
+/* Estilo del video */
+video {
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    border-radius: 10px; /* Bordes redondeados para un efecto más suave */
+}
+/* fin del header y video */
+
+/* inicio de las img destacado  */
+
+
+.carousel {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.caption {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+#caption {
+    text-align: center;
+    color: #ccc;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+/* Carrusel */
+.carousel {
+    position: relative;
+    width: 90%; /* Reducimos el ancho para que los márgenes sean visibles */
+    margin: 20px auto; /* Márgenes superior e inferior y centrado */
+    padding: 0; /* Sin padding para evitar exceso de espacio */
+    overflow: hidden;
+    border-radius: 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+    .carousel {
+        width: 90%; /* Ajustamos el ancho para móviles */
+        margin: 15px auto; /* Márgenes laterales y centrado */
+    }
+}
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.carousel img {
+    width: 100%; /* Las imágenes ocupan todo el ancho */
+    height: auto; /* Mantiene la relación de aspecto */
+    max-height: 400px; /* Ajusta la altura máxima según sea necesario */
+    display: block; /* Elimina el espacio debajo de las imágenes */
+    border-radius: 0; /* Sin bordes redondeados para un ajuste completo */
+}
+
+.caption {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Cinzel', serif; /* Cambia el estilo a Cinzel */
+    font-size: 18px; /* Ajusta el tamaño de la fuente según sea necesario */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra sutil */
+}
+
+/* Estilo para botones de navegación */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent; /* Fondo transparente */
+    border: none;
+    font-family: 'Cinzel', serif; /* Mismo estilo de letra que el título */
+    font-size: 24px; /* Tamaño de fuente */
+    color: #333; /* Color de texto */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra sutil */
+    cursor: pointer;
+    padding: 10px; /* Espacio alrededor del texto */
+    transition: color 0.3s; /* Transición suave en hover */
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Efecto de hover */
+.prev:hover, .next:hover {
+    color: #6a6a6a; /* Color de texto en hover */
+}
+/* Estilo del encabezado */
+h3 {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    color: #333;
+    position: relative; /* Asegura que el z-index funcione */
+    z-index: 2000; /* Asegúrate de que el z-index sea mayor que el del carrusel */
+    margin: 20px 0; /* Añadir margen para espacio */
+}
+
+/* Estilo para el modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Fijo en la pantalla */
+    z-index: 100033; /* Encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    overflow: auto; /* Habilitar desplazamiento si es necesario */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo negro semi-transparente */
+}
+
+/* Contenido del modal */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%; /* Ancho del contenido del modal */
+    max-width: 700px; /* Ancho máximo */
+}
+
+/* Estilo para el pie de imagen */
+#caption {
+    margin: 10px;
+    text-align: center;
+    color: white; /* Color del texto */
+}
+
+
+/* 5 img con links */
+.logo{
+    width: 100%; /* Ancho del contenedor, dejando margen a los lados */
+    margin: 0 auto; /* Centrar el contenedor y espacio en la parte superior e inferior */
+    padding: 0; /* Sin padding adicional */
+}
+/* Estilo para la lista de imágenes */
+.image-list {
+    width: 90%; /* Ancho del contenedor, dejando margen a los lados */
+    margin: 20px auto; /* Centrar el contenedor y espacio en la parte superior e inferior */
+    padding: 0; /* Sin padding adicional */
+}
+
+/* Estilo para cada imagen */
+.image-item {
+    margin: 15px 0; /* Espacio entre imágenes */
+    text-align: center; /* Centrar texto debajo de cada imagen */
+}
+
+/* Estilo para las imágenes */
+.image-item img {
+    width: 100%; /* Hacer que la imagen ocupe el ancho completo del contenedor */
+    height: auto; /* Mantener la relación de aspecto */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Estilo para los textos */
+.image-caption {
+    font-family: 'Cinzel', serif; /* Fuente Cinzel */
+    font-size: 16px; /* Tamaño de fuente ajustado para móviles */
+    color: #333; /* Color del texto */
+    margin-top: 10px; /* Espacio entre la imagen y el texto */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra sutil */
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .image-caption {
+        font-size: 14px; /* Tamaño de fuente más pequeño en móviles */
+    }
+}
+/* Estilo para los enlaces en la lista de imágenes */
+.image-item a {
+    text-decoration: none; /* Quita el subrayado */
+    color: inherit; /* Mantiene el color del texto del padre */
+}
+
+/* FOOTER */
+/* Estilo para el footer */
+.footer {
+    background-color: #000; /* Fondo negro solo para el copyright */
+    color: #fff; /* Texto blanco */
+    text-align: center; /* Centrar el texto */
+    padding: 10px 0; /* Espaciado vertical para el copyright */
+}
+
+/* Estilo para el contenido fuera del fondo negro */
+.footer-content {
+    display: flex; /* Usar flexbox para alinear elementos */
+    flex-direction: column; /* Disposición en columna */
+    align-items: center; /* Alinear horizontalmente al centro */
+    margin: 10px 0; /* Espacio alrededor del contenido */
+}
+
+/* Estilo para el icono de Instagram */
+.social-icon img {
+    width: 30px; /* Tamaño del icono */
+    height: auto; /* Mantener la relación de aspecto */
+    margin-bottom: 5px; /* Espacio debajo del icono */
+}
+
+/* Estilo para la dirección */
+.footer-address {
+    font-family: 'Cinzel', serif; /* Fuente Cinzel */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+/* Estilo para el copyright */
+.footer-copyright {
+    background-color: #000; /* Fondo negro para el copyright */
+    color: #fff; /* Texto blanco */
+    font-family: 'Cinzel', serif; /* Fuente Cinzel */
+    font-size: 14px; /* Tamaño de fuente */
+    padding: 10px 0; /* Espaciado vertical */
+}
+
+/* Estilo para los enlaces */
+.footer a {
+    color: #fff; /* Color blanco */
+    text-decoration: none; /* Sin subrayado */
+}
+
+/* VESTIDOS Y POLLERAS */
+
+body {
+    font-family: 'Cinzel', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para el título */
+.catalog-title {
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+/* Estilo del grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding: 10px;
+}
+
+.item {
+    background-color: #fff;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    margin-bottom: 10px;
+}
+
+.item img:hover {
+    transform: scale(1.05);
+}
+
+.item h3 {
+    font-size: 16px;
+    margin: 10px 0 5px;
+}
+
+.item p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Animación del item al hover */
+.item:hover {
+    transform: translateY(-5px);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.modal.show {
+    display: flex;
+    opacity: 1;
+}
+
+/* Estilo del modal */
+.modal-content img {
+    width: 100%;      /* Asegura que la imagen ocupe el 100% del ancho del modal */
+    height: auto;     /* Mantiene la proporción de la imagen */
+    max-height: 80vh; /* Limita la altura máxima a 80% de la altura de la ventana */
+    object-fit: contain; /* Asegura que la imagen se ajuste sin distorsionarse */
+}
+
+.modal.show .modal-content {
+    transform: scale(1);
+}
+
+/* Estilo del botón de cerrar */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: #555; /* Color cambiado */
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 20px;
+    line-height: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.close:hover {
+    background-color: #777; /* Color más claro al pasar el ratón */
+}
+
+
+
+/* REMERAS CORTAS */
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    padding: 10px;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+}
+
+/* Overlay Styles */
+.overlay {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro translúcido */
+    justify-content: center;
+    align-items: center;
+    z-index: 10000; /* Colocarlo en primer plano */
+}
+
+.overlay-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out; /* Suavizar el zoom */
+}
+
+.overlay-content:hover {
+    transform: scale(1.05); /* Efecto de zoom adicional al pasar el mouse */
+    cursor: zoom-out;
+}
+
+
+/* REMERAS LARGAS */
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    padding: 10px;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+}
+
+/* Overlay Styles */
+.overlay {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro translúcido */
+    justify-content: center;
+    align-items: center;
+    z-index: 10000; /* Colocarlo en primer plano */
+}
+
+.overlay-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out; /* Suavizar el zoom */
+}
+
+.overlay-content:hover {
+    transform: scale(1.05); /* Efecto de zoom adicional al pasar el mouse */
+    cursor: zoom-out;
+}
+
+
+
+/* BUZOS/SWEATERS */
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    padding: 10px;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+}
+
+/* Overlay Styles */
+.overlay {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro translúcido */
+    justify-content: center;
+    align-items: center;
+    z-index: 10000; /* Colocarlo en primer plano */
+}
+
+.overlay-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out; /* Suavizar el zoom */
+}
+
+.overlay-content:hover {
+    transform: scale(1.05); /* Efecto de zoom adicional al pasar el mouse */
+    cursor: zoom-out;
+}
+
+
+/* PANTALONES */
+
+
+/* Estilos para el catálogo */
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+}
+
+.info {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.info h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.info p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Overlay para el zoom */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 10001;
+}
+
+.overlay-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.overlay-content:hover {
+    transform: scale(1.05);
+    cursor: zoom-out;
+}
+
+/* Para centrar el contenido dentro del overlay */
+#overlay {
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mostrar el overlay con flex al hacer clic */
+#overlay.active {
+    display: flex;
+}
+
+
+/* JOGGINS */
+
+
+/* Estilos para el catálogo */
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+}
+
+.info {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.info h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.info p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Overlay para el zoom */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 10010;
+}
+
+.overlay-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.overlay-content:hover {
+    transform: scale(1.05);
+    cursor: zoom-out;
+}
+
+/* Para centrar el contenido dentro del overlay */
+#overlay {
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mostrar el overlay con flex al hacer clic */
+#overlay.active {
+    display: flex;
+}
+
+
+
+
+/* jeans */
+
+
+
+/* Estilos para el catálogo */
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+}
+
+.info {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.info h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.info p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Overlay para el zoom */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 10010;
+}
+
+.overlay-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.overlay-content:hover {
+    transform: scale(1.05);
+    cursor: zoom-out;
+}
+
+/* Para centrar el contenido dentro del overlay */
+#overlay {
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mostrar el overlay con flex al hacer clic */
+#overlay.active {
+    display: flex;
+}
+
+
+
+/* SHORTS */
+
+/* Estilos para el catálogo */
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+}
+
+.info {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.info h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.info p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Overlay para el zoom */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 10200;
+}
+
+.overlay-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.overlay-content:hover {
+    transform: scale(1.05);
+    cursor: zoom-out;
+}
+
+/* Para centrar el contenido dentro del overlay */
+#overlay {
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mostrar el overlay con flex al hacer clic */
+#overlay.active {
+    display: flex;
+}
+
+
+/* CAMPERAS */
+
+
+
+/* Estilos para el catálogo */
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+}
+
+.info {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.info h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.info p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Overlay para el zoom */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 10020;
+}
+
+.overlay-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.overlay-content:hover {
+    transform: scale(1.05);
+    cursor: zoom-out;
+}
+
+/* Para centrar el contenido dentro del overlay */
+#overlay {
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mostrar el overlay con flex al hacer clic */
+#overlay.active {
+    display: flex;
+}
