@@ -1237,3 +1237,14 @@ body {
 #overlay.active {
     display: flex;
 }
+
+
+a h1 {
+    text-decoration: none;  /* Elimina el subrayado */
+    color: inherit;         /* Hereda el color del texto, para que no se muestre el color de enlace predeterminado */
+}
+
+a {
+    text-decoration: none;  /* Asegúrate de que el enlace no tenga subrayado */
+    color: inherit;         /* Hereda el color del texto */
+}
