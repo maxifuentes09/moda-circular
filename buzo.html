@@ -75,6 +75,23 @@
         <img id="overlayImg" class="overlay-content">
     </div>
 
+    <script>
+        function checkScreenSize() {
+            if (window.innerWidth >= 1024) {
+                document.getElementById("desktop-warning").style.display = "flex";
+                document.body.style.overflow = "hidden"; // Evita el scroll en el fondo
+            } else {
+                document.getElementById("desktop-warning").style.display = "none";
+                document.body.style.overflow = "auto"; // Restaura el scroll en dispositivos móviles
+            }
+        }
+    
+        // Ejecutar al cargar la página y al redimensionar la ventana
+        window.addEventListener("load", checkScreenSize);
+        window.addEventListener("resize", checkScreenSize);
+    </script>
+    
+
     <script src="script.js"></script>
 </body>
 </html>
